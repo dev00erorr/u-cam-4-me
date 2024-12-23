@@ -1,0 +1,14 @@
+<a href="#" onclick="requestCameraAccess()">Request Camera Access</a>
+
+<script>
+  function requestCameraAccess() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        // Do something with the camera stream
+        console.log(stream);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+</script>
